@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Smart Contract Analyzer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application for analyzing smart contract code for vulnerabilities using AI.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js
+- Python
+- Flask
 
-### `npm test`
+### Backend Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/your-username/smart-contract-analyzer.git
+   cd smart-contract-analyzer/backend
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install Python dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the Flask server:
+   ```bash
+   python app.py
+   ```
 
-### `npm run eject`
+### Frontend Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Navigate to the frontend directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd ../frontend
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install Node.js dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Open your web browser and navigate to http://localhost:3000.
+2. Enter your smart contract code in the textarea.
+3. Click on the "Analyze Contract" button to see the analysis results.
 
-### Code Splitting
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- AI-driven analysis of smart contract code for potential vulnerabilities.
+- Real-time feedback on contract security.
+- Easy-to-use interface for developers.
 
-### Analyzing the Bundle Size
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Deploying Frontend to Netlify
 
-### Making a Progressive Web App
+1. Sign up or log in to [Netlify](https://www.netlify.com/).
+2. Connect your GitHub repository to Netlify.
+3. Set the build command to `npm run build` and the publish directory to `build`.
+4. Trigger the deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Deploying Backend
 
-### Advanced Configuration
+- Deploy your Flask backend to a suitable hosting service or platform as per your requirements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions are welcome! Please fork the repository and submit a pull request with your changes. Follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Thanks to the aelf team for the blockchain platform.
+- AI models used in this project are based on TensorFlow and Google Cloud AI Platform.
