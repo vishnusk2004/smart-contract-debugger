@@ -6,6 +6,7 @@ A web application for analyzing smart contract code for vulnerabilities using AI
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Example Smart Contract](#example-smart-contract)
 - [Features](#features)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
@@ -25,8 +26,8 @@ A web application for analyzing smart contract code for vulnerabilities using AI
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/smart-contract-analyzer.git
-   cd smart-contract-analyzer/backend
+   git clone https://github.com/vishnusk2004/smart-contract-debugger.git
+   cd smart-contract-debugger/backend
    ```
 
 2. Install Python dependencies:
@@ -36,6 +37,7 @@ A web application for analyzing smart contract code for vulnerabilities using AI
    ```
 
 3. Start the Flask server:
+
    ```bash
    python app.py
    ```
@@ -55,6 +57,7 @@ A web application for analyzing smart contract code for vulnerabilities using AI
    ```
 
 3. Start the React development server:
+
    ```bash
    npm start
    ```
@@ -65,6 +68,37 @@ A web application for analyzing smart contract code for vulnerabilities using AI
 2. Enter your smart contract code in the textarea.
 3. Click on the "Analyze Contract" button to see the analysis results.
 
+## Example Smart Contract
+
+You can use the following example Solidity smart contract to test the analyzer:
+
+```solidity
+// Example Solidity Smart Contract
+pragma solidity ^0.8.0;
+
+contract SimpleContract {
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function transfer(address recipient, uint256 amount) public {
+        require(msg.sender == owner, "Only owner can transfer funds");
+        payable(recipient).transfer(amount);
+    }
+
+    function deposit() public payable {
+        // Deposit ether to the contract
+    }
+
+    function withdraw(uint256 amount) public {
+        require(msg.sender == owner, "Only owner can withdraw funds");
+        payable(owner).transfer(amount);
+    }
+}
+```
+
 ## Features
 
 - AI-driven analysis of smart contract code for potential vulnerabilities.
@@ -73,12 +107,13 @@ A web application for analyzing smart contract code for vulnerabilities using AI
 
 ## Deployment
 
-### Deploying Frontend to Netlify
+### Deploying Frontend to Vercel
 
-1. Sign up or log in to [Netlify](https://www.netlify.com/).
-2. Connect your GitHub repository to Netlify.
-3. Set the build command to `npm run build` and the publish directory to `build`.
+1. Sign up or log in to [Vercel](https://vercel.com/).
+2. Connect your GitHub repository to Vercel.
+3. Set the build command to `npm run build` and the output directory to `frontend/build`.
 4. Trigger the deployment.
+5. Your frontend is now live at [https://smart-contract-debugger.vercel.app/](https://smart-contract-debugger.vercel.app/).
 
 ### Deploying Backend
 
