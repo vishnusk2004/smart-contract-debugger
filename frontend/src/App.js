@@ -11,7 +11,7 @@ function App() {
     try {
       setIsLoading(true); // Start loading
 
-      const response = await fetch("/api/analyze", {
+      const response = await fetch("https://smart-contract-debugger-backend.onrender.com/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
