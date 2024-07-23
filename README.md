@@ -1,72 +1,91 @@
-# Smart Contract Analyzer
+# Smart Contract Debugger
 
-A web application for analyzing smart contract code for vulnerabilities using AI.
+## Overview
+Smart Contract Debugger is an AI-powered tool designed to analyze and identify potential issues in smart contract code. It leverages advanced AI techniques to streamline the development process on aelf blockchain.
 
-## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example Smart Contract](#example-smart-contract)
-- [Features](#features)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
-## Installation
-
-### Prerequisites
+## Prerequisites
 
 - Node.js
 - Python
 - Flask
 
-### Backend Installation
+## Installation
+
+### Frontend
 
 1. Clone the repository:
+    ```bash
+    git clone https://github.com/vishnusk2004/smart-contract-debugger.git
+    cd smart-contract-debugger/frontend
+    ```
 
-   ```bash
-   git clone https://github.com/vishnusk2004/smart-contract-debugger.git
-   cd smart-contract-debugger/backend
-   ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-2. Install Python dependencies:
+3. Change the backend URL for local development:
+    Open `src/App.js` and update the backend URL to your local backend server URL:
+    ```javascript
+    const response = await fetch("http://localhost:5000/analyze", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ contract_code: contractCode }),
+    });
+    ```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
 
-3. Start the Flask server:
+### Backend
 
-   ```bash
-   python app.py
-   ```
+1. Navigate to the backend directory:
+    ```bash
+    cd ../backend
+    ```
 
-### Frontend Installation
+2. Create a virtual environment:
+    ```bash
+    python -m venv venv
+    ```
 
-1. Navigate to the frontend directory:
+3. Activate the virtual environment:
+    - On Windows:
+        ```bash
+        venv\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```bash
+        source venv/bin/activate
+        ```
 
-   ```bash
-   cd ../frontend
-   ```
+4. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-2. Install Node.js dependencies:
+5. Start the Flask server:
+    ```bash
+    python app.py
+    ```
 
-   ```bash
-   npm install
-   ```
+## Deployment
+The frontend is deployed on Vercel and the backend is deployed on Render. The deployment links are as follows:
+- **Frontend:** [smart-contract-debugger.vercel.app](https://smart-contract-debugger-aelf.vercel.app/)
+- **Backend:** [smart-contract-debugger-backend.onrender.com](https://smart-contract-debugger-backend.onrender.com)
 
-3. Start the React development server:
-
-   ```bash
-   npm start
-   ```
 
 ## Usage
 
-1. Open your web browser and navigate to http://localhost:3000.
+1. Navigate to the frontend URL.
 2. Enter your smart contract code in the textarea.
-3. Click on the "Analyze Contract" button to see the analysis results.
+3. Click on "Analyze Contract".
+4. View the analysis results.
 
 ## Example Smart Contract
 
@@ -98,36 +117,21 @@ contract SimpleContract {
     }
 }
 ```
-
 ## Features
 
 - AI-driven analysis of smart contract code for potential vulnerabilities.
 - Real-time feedback on contract security.
 - Easy-to-use interface for developers.
 
-## Deployment
-
-### Deploying Frontend to Vercel
-
-1. Sign up or log in to [Vercel](https://vercel.com/).
-2. Connect your GitHub repository to Vercel.
-3. Set the build command to `npm run build` and the output directory to `frontend/build`.
-4. Trigger the deployment.
-5. Your frontend is now live at [https://smart-contract-debugger.vercel.app/](https://smart-contract-debugger.vercel.app/).
-
-### Deploying Backend
-
-- Deploy your Flask backend to a suitable hosting service or platform as per your requirements.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes. Follow these steps:
-
 1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
 
 ## License
 
@@ -137,3 +141,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Thanks to the aelf team for the blockchain platform.
 - AI models used in this project are based on TensorFlow and Google Cloud AI Platform.
+
