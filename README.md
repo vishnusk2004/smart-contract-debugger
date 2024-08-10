@@ -139,10 +139,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- Thanks to the aelf team for the blockchain platform.
+- Thanks to the aelf team for the blockchain platform, and supporting developers for contributing into Web3 and aelf.
+- Thanks to StackUp for providing the platform.
 - AI models used in this project are based on TensorFlow and Google Cloud AI Platform.
 
 ## Note
 
 - First open the Backend server. (For Faster Analysis)
+- To start the Backend server it could take few minutes
 - Once opened, now you can Submit and analyze your smart contract in the frontend.
